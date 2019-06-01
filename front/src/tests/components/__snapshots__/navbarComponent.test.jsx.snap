@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<[object Object]
+  bg="dark"
+  expand="lg"
+  id="navbar"
+  variant="dark"
+>
+  <[object Object]
+    aria-controls="basic-navbar-nav"
+    as="button"
+    label="Toggle navigation"
+  />
+  <NavLink
+    id="brand"
+    to="/"
+  >
+    <[object Object]
+      href="#home"
+    >
+      <img
+        alt=""
+        className="d-inline-block align-top"
+        height="30"
+        src="/logo.png"
+        width="50"
+      />
+    </[object Object]>
+    Contare 
+  </NavLink>
+  <[object Object]
+    className="justify-content-end"
+    id="basic-navbar-nav"
+  >
+    <NavLink
+      className="nav-button"
+      to="/register"
+    >
+      <[object Object]
+        active={false}
+        disabled={false}
+        type="button"
+        variant="primary"
+      >
+        Registre-se
+      </[object Object]>
+    </NavLink>
+    <NavLink
+      className="nav-button"
+      to="/login"
+    >
+      <[object Object]
+        active={false}
+        disabled={false}
+        id="nav-button"
+        onClick={[Function]}
+        type="button"
+        variant="primary"
+      >
+        Entrar
+      </[object Object]>
+    </NavLink>
+  </[object Object]>
+</[object Object]>
+`;
