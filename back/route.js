@@ -9,6 +9,8 @@ const InvitationController = require("./controllers/InvitationController")
 router.get("/user", UserController.show);
 router.put("/user", UserController.update);
 router.get("/user/getAll",UserController.listEmails) // retorna todos os emails do sistema exceto o email do usuário corrente
+
+router.get("/user/:userID",UserController.getObjUSER)
 //---------
 
 // DESPESAS
@@ -21,7 +23,8 @@ router.delete("/user/expenses/:expID", ExpenseController.delete);
 // CONVITES
 router.get("/user/invitations",UserController.indexInvitations) // Listar convites do cara atual
 router.put("/user/invitations",InvitationController.accept) // Aceitar um convite
-router.delete("/user/invitations",InvitationController.refuse) // Recusar um convite
+router.post("/user/invitations",InvitationController.refuse) // Recusar um convite
+
 
 router.post("/register", authController.register);
 router.post("/authenticate", authController.authenticate);
