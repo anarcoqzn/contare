@@ -38,7 +38,8 @@ module.exports = {
                                 title: req.body.title,
                                 description: req.body.description,
                                 dueDate: req.body.dueDate,
-                                owner: user._id
+                                owner: user._id, 
+                                totalValue: req.body.totalValue,
                             })
                              
                             thisExpense.participants.push({

@@ -135,7 +135,7 @@ class DetalharExpenseComponent extends Component {
 
           <div className="div-dado">
             <label>Valor Total da despesa:</label>
-            <p><b>{this.state.valueTotal} </b></p>
+            <p><b>{this.props.expense.totalValue} </b></p>
           </div>
           {/* <div className="div-dado">
             <label>Status:</label>
