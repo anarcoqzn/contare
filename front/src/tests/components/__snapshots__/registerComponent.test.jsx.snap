@@ -1,0 +1,421 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render RegisterComponentForm correctly 1`] = `
+<div>
+  <h3>
+    Registre-se
+  </h3>
+  <[object Object]
+    as="form"
+    inline={false}
+    noValidate={true}
+    onSubmit={[Function]}
+    validated={false}
+  >
+    <[object Object]
+      as="div"
+      controlId="formBasicName"
+    >
+      <[object Object]
+        column={false}
+        srOnly={false}
+      >
+        Insira seu nome
+      </[object Object]>
+      <[object Object]
+        as="input"
+        placeholder="Insira seu nome"
+        required={true}
+        type="text"
+      />
+      <[object Object]
+        as="div"
+        type="invalid"
+      >
+        Por favor digite seu nome.
+      </[object Object]>
+    </[object Object]>
+    <[object Object]
+      as="div"
+      controlId="formBasicEmail"
+    >
+      <[object Object]
+        column={false}
+        srOnly={false}
+      >
+        Insira seu e-mail
+      </[object Object]>
+      <[object Object]
+        as="input"
+        placeholder="Insira um e-mail válido"
+        required={true}
+        type="email"
+      />
+      <[object Object]
+        as="div"
+        type="invalid"
+      >
+        Por favor digite um email válido.
+      </[object Object]>
+    </[object Object]>
+    <[object Object]
+      as="div"
+      controlId="formBasicPassword"
+    >
+      <[object Object]
+        column={false}
+        srOnly={false}
+      >
+        Insira sua senha
+      </[object Object]>
+      <[object Object]
+        as="input"
+        placeholder="Escolha uma senha"
+        required={true}
+        type="password"
+      />
+      <[object Object]
+        as="div"
+        type="invalid"
+      >
+        Por favor digite sua senha.
+      </[object Object]>
+    </[object Object]>
+    <[object Object]
+      as="div"
+      controlId="formBasicPasswordConfirm"
+    >
+      <[object Object]
+        column={false}
+        srOnly={false}
+      >
+        Confirme sua senha
+      </[object Object]>
+      <[object Object]
+        as="input"
+        placeholder="Confirme sua senha escolhida"
+        required={true}
+        type="password"
+      />
+      <[object Object]
+        as="div"
+        type="invalid"
+      >
+        Por favor confirme sua senha.
+      </[object Object]>
+    </[object Object]>
+    <[object Object]
+      active={false}
+      disabled={false}
+      type="submit"
+      variant="primary"
+    >
+      Cadastrar
+    </[object Object]>
+  </[object Object]>
+  <ToastContainer
+    autoClose={5000}
+    bodyClassName={null}
+    className={null}
+    closeButton={
+      <CloseButton
+        ariaLabel="close"
+      />
+    }
+    closeOnClick={true}
+    draggable={true}
+    draggablePercent={80}
+    hideProgressBar={false}
+    newestOnTop={false}
+    pauseOnFocusLoss={true}
+    pauseOnHover={true}
+    position="top-right"
+    progressClassName={null}
+    progressStyle={null}
+    rtl={false}
+    style={null}
+    toastClassName={null}
+    transition={[Function]}
+  />
+</div>
+`;
+
+exports[`should render correctly 1`] = `
+<div>
+  <h3>
+    Registre-se
+  </h3>
+  <[object Object]
+    as="form"
+    inline={false}
+    noValidate={true}
+    onSubmit={[Function]}
+    validated={false}
+  >
+    <[object Object]
+      as="div"
+      controlId="formBasicName"
+    >
+      <[object Object]
+        column={false}
+        srOnly={false}
+      >
+        Insira seu nome
+      </[object Object]>
+      <[object Object]
+        as="input"
+        placeholder="Insira seu nome"
+        required={true}
+        type="text"
+      />
+      <[object Object]
+        as="div"
+        type="invalid"
+      >
+        Por favor digite seu nome.
+      </[object Object]>
+    </[object Object]>
+    <[object Object]
+      as="div"
+      controlId="formBasicEmail"
+    >
+      <[object Object]
+        column={false}
+        srOnly={false}
+      >
+        Insira seu e-mail
+      </[object Object]>
+      <[object Object]
+        as="input"
+        placeholder="Insira um e-mail válido"
+        required={true}
+        type="email"
+      />
+      <[object Object]
+        as="div"
+        type="invalid"
+      >
+        Por favor digite um email válido.
+      </[object Object]>
+    </[object Object]>
+    <[object Object]
+      as="div"
+      controlId="formBasicPassword"
+    >
+      <[object Object]
+        column={false}
+        srOnly={false}
+      >
+        Insira sua senha
+      </[object Object]>
+      <[object Object]
+        as="input"
+        placeholder="Escolha uma senha"
+        required={true}
+        type="password"
+      />
+      <[object Object]
+        as="div"
+        type="invalid"
+      >
+        Por favor digite sua senha.
+      </[object Object]>
+    </[object Object]>
+    <[object Object]
+      as="div"
+      controlId="formBasicPasswordConfirm"
+    >
+      <[object Object]
+        column={false}
+        srOnly={false}
+      >
+        Confirme sua senha
+      </[object Object]>
+      <[object Object]
+        as="input"
+        placeholder="Confirme sua senha escolhida"
+        required={true}
+        type="password"
+      />
+      <[object Object]
+        as="div"
+        type="invalid"
+      >
+        Por favor confirme sua senha.
+      </[object Object]>
+    </[object Object]>
+    <[object Object]
+      active={false}
+      disabled={false}
+      type="submit"
+      variant="primary"
+    >
+      Cadastrar
+    </[object Object]>
+  </[object Object]>
+  <ToastContainer
+    autoClose={5000}
+    bodyClassName={null}
+    className={null}
+    closeButton={
+      <CloseButton
+        ariaLabel="close"
+      />
+    }
+    closeOnClick={true}
+    draggable={true}
+    draggablePercent={80}
+    hideProgressBar={false}
+    newestOnTop={false}
+    pauseOnFocusLoss={true}
+    pauseOnHover={true}
+    position="top-right"
+    progressClassName={null}
+    progressStyle={null}
+    rtl={false}
+    style={null}
+    toastClassName={null}
+    transition={[Function]}
+  />
+</div>
+`;
+
+exports[`should render error for invalid form submission 1`] = `
+<div>
+  <h3>
+    Registre-se
+  </h3>
+  <[object Object]
+    as="form"
+    inline={false}
+    noValidate={true}
+    onSubmit={[Function]}
+    validated={false}
+  >
+    <[object Object]
+      as="div"
+      controlId="formBasicName"
+    >
+      <[object Object]
+        column={false}
+        srOnly={false}
+      >
+        Insira seu nome
+      </[object Object]>
+      <[object Object]
+        as="input"
+        placeholder="Insira seu nome"
+        required={true}
+        type="text"
+      />
+      <[object Object]
+        as="div"
+        type="invalid"
+      >
+        Por favor digite seu nome.
+      </[object Object]>
+    </[object Object]>
+    <[object Object]
+      as="div"
+      controlId="formBasicEmail"
+    >
+      <[object Object]
+        column={false}
+        srOnly={false}
+      >
+        Insira seu e-mail
+      </[object Object]>
+      <[object Object]
+        as="input"
+        placeholder="Insira um e-mail válido"
+        required={true}
+        type="email"
+      />
+      <[object Object]
+        as="div"
+        type="invalid"
+      >
+        Por favor digite um email válido.
+      </[object Object]>
+    </[object Object]>
+    <[object Object]
+      as="div"
+      controlId="formBasicPassword"
+    >
+      <[object Object]
+        column={false}
+        srOnly={false}
+      >
+        Insira sua senha
+      </[object Object]>
+      <[object Object]
+        as="input"
+        placeholder="Escolha uma senha"
+        required={true}
+        type="password"
+      />
+      <[object Object]
+        as="div"
+        type="invalid"
+      >
+        Por favor digite sua senha.
+      </[object Object]>
+    </[object Object]>
+    <[object Object]
+      as="div"
+      controlId="formBasicPasswordConfirm"
+    >
+      <[object Object]
+        column={false}
+        srOnly={false}
+      >
+        Confirme sua senha
+      </[object Object]>
+      <[object Object]
+        as="input"
+        placeholder="Confirme sua senha escolhida"
+        required={true}
+        type="password"
+      />
+      <[object Object]
+        as="div"
+        type="invalid"
+      >
+        Por favor confirme sua senha.
+      </[object Object]>
+    </[object Object]>
+    <[object Object]
+      active={false}
+      disabled={false}
+      type="submit"
+      variant="primary"
+    >
+      Cadastrar
+    </[object Object]>
+  </[object Object]>
+  <ToastContainer
+    autoClose={5000}
+    bodyClassName={null}
+    className={null}
+    closeButton={
+      <CloseButton
+        ariaLabel="close"
+      />
+    }
+    closeOnClick={true}
+    draggable={true}
+    draggablePercent={80}
+    hideProgressBar={false}
+    newestOnTop={false}
+    pauseOnFocusLoss={true}
+    pauseOnHover={true}
+    position="top-right"
+    progressClassName={null}
+    progressStyle={null}
+    rtl={false}
+    style={null}
+    toastClassName={null}
+    transition={[Function]}
+  />
+</div>
+`;
