@@ -89,7 +89,7 @@ describe('creating invites', function() {
 
                 chai.request('http://localhost:8080/contare')
                     .post('/user/expenses')
-                    .send({ title: 'expense test', listEmail: [{ payValue: 50 }, { email: "teste2@mail.com", payValue: 501 }] })
+                    .send({ title: 'expense test', listEmail: [{ payValue: 50 }, { email: "teste2@mail.com", payValue: 501 }], totalValue: 551 })
                     .set('Content-Type', 'application/json')
                     .set('x-access-token', user_token)
                     .end((err, resnumber2) => {
@@ -138,7 +138,7 @@ describe('creating invite using invalid guesting', function() {
 
                 chai.request('http://localhost:8080/contare')
                     .post('/user/expenses')
-                    .send({ title: 'ExpenseTest', listEmail: [{ payValue: 150 }, { email: "teste3@mail.com", payValue: 510 }] })
+                    .send({ title: 'ExpenseTest', listEmail: [{ payValue: 150 }, { email: "teste3@mail.com", payValue: 510 }], totalValue: 660 })
                     .set('Content-Type', 'application/json')
                     .set('x-access-token', user_token)
                     .end((err, resnumber2) => {
