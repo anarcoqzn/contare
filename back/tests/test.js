@@ -134,55 +134,52 @@ describe('creating invites', function() {
 
 })
 
-// describe('answer invitation', () => {
-//     it('accepting invite', (done) => {
-//         var serverAgentInvitation = requestAgent.agent('http://localhost:8080/contare')
-//         var user = {
-//             name: 'Teste2',
-//             email:"teste2@mail.com", 
-//             password:"teste2"
-//         }
-//         var user_token;
+describe('answer invitation', () => {
+    it('accepting invite', (done) => {
+        var serverAgentInvitation = requestAgent.agent('http://localhost:8080/contare')
+        var user = {
+            name: 'Teste2',
+            email:"teste2@mail.com", 
+            password:"teste2"
+        }
+        var user_token;
 
-//         serverAgentInvitation
-//             .post('/authenticate')
-//             .send(user)
-//             .end( (err, res) => {
-//                 if (err) return done(err)
-//                 should.exist(res);
-//                 user_token = res.body.token
-//                 res.should.have.status(200)
-//                 chai.request('http://localhost:8080/contare')
-//                     .get('/user/invitations')
-//                     .set('Content-Type', 'application/json')
-//                     .set('x-access-token', user_token)
-//                     .end((err, getExpenses) => {
-//                         console.log(getExpenses.body)
-//                         getExpenses.should.have.status(200);
-//                         expect(getExpenses.body[0].participationValue).to.equal(501)
-//                         chai.request('http://localhost:8080/contare')
-//                             .put('/user/invitations')
-//                             // .send({invitationId: '5cf5d7c17206943ce2eef2ed', expense: getExpenses.expense})
-//                             .send({invitationId: getExpenses._id, expense: getExpenses.expense})
-//                             .set('Content-Type', 'application/json')
-//                             .set('x-access-token', user_token)
-//                             .end((err, answer) => {
-//                                 answer.should.have.status(200);
-//                                 chai.request('http://localhost:8080/contare')
-//                                     .get('/user/expenses')
-//                                     .set('Content-Type', 'application/json')
-//                                     .set('x-access-token', user_token)
-//                                     .end((err, getExpensesAccepted) => {
-//                                         getExpensesAccepted.should.have.status(200);
-//                                         console.log(getExpensesAccepted.body)
-//                                         done()
-//                                     })
-//                             })
+        serverAgentInvitation
+            .post('/authenticate')
+            .send(user)
+            .end( (err, res) => {
+                if (err) return done(err)
+                should.exist(res);
+                user_token = res.body.token
+                res.should.have.status(200)
+                chai.request('http://localhost:8080/contare')
+                    .get('/user/invitations')
+                    .set('Content-Type', 'application/json')
+                    .set('x-access-token', user_token)
+                    .end((err, getExpenses) => {
+                        getExpenses.should.have.status(200);
+                        expect(getExpenses.body[0].participationValue).to.equal(501)
+                        chai.request('http://localhost:8080/contare')
+                            .put('/user/invitations')
+                            .send({invitationId: getExpenses.body[0]._id, expense: getExpenses.body[0].expense})
+                            .set('Content-Type', 'application/json')
+                            .set('x-access-token', user_token)
+                            .end((err, answer) => {
+                                answer.should.have.status(200);
+                                chai.request('http://localhost:8080/contare')
+                                    .get('/user/expenses')
+                                    .set('Content-Type', 'application/json')
+                                    .set('x-access-token', user_token)
+                                    .end((err, getExpensesAccepted) => {
+                                        getExpensesAccepted.should.have.status(200);
+                                        done()
+                                    })
+                            })
                         
-//                     })
-//             })
-//     })
-// })
+                    })
+            })
+    })
+})
 
 describe('creating invite', function() {
 
