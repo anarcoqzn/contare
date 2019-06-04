@@ -1,5 +1,6 @@
 const User = require('../models/User')
 const Expense = require('../models/Expense')
+const Invitation = require('../models/Invitation')
 const mongoose = require('mongoose');
 const request = require('request')
 const chai      = require('chai')
@@ -69,7 +70,22 @@ describe('creating invites', function() {
             })
     })
 
-    it('login', (done) => {
+    beforeEach( ( done ) => {
+        
+        var url = '/register'
+        chai.request('http://localhost:8080/contare')
+            .post(url)
+            .send({'name':"Teste2", 'email':"teste3@mail.com", 'password':"teste2"})
+            .set('Content-Type', 'application/json')
+            .set('Accept', 'application/json')
+            .end((err, res) => {
+                should.exist(res);
+                res.should.have.status(200)
+                done()
+            })
+    })
+
+    it('expense with guest', (done) => {
         var serverAgent = requestAgent.agent('http://localhost:8080/contare')
         var user = {
             name: 'Teste1',
@@ -89,7 +105,7 @@ describe('creating invites', function() {
 
                 chai.request('http://localhost:8080/contare')
                     .post('/user/expenses')
-                    .send({ title: 'expense test', listEmail: [{ payValue: 50 }, { email: "teste2@mail.com", payValue: 501 }], totalValue: 551 })
+                    .send({ title: 'expense test', listEmail: [{ payValue: 50 }, { email: "teste2@mail.com", payValue: 501 }, { email: "teste3@mail.com", payValue: 301 }], totalValue: 551 })
                     .set('Content-Type', 'application/json')
                     .set('x-access-token', user_token)
                     .end((err, resnumber2) => {
@@ -103,22 +119,26 @@ describe('creating invites', function() {
                                 resnumber3.should.have.status(200);
                                 resnumber3.body.should.be.a('array');
                                 expect(resnumber3.body[0].title).to.equal('expense test')
-                                // expect(resnumber3.body[0].participants[0].email).to.equal('teste2@mail.com')
-                                // console.log(resnumber3.body[0].participants)
+                                expect(resnumber3.body[0].participants[0].email).to.equal('teste1@mail.com')
+                                expect(resnumber3.body[0].participants[0].status).to.equal(false)
+                                expect(resnumber3.body[0].participants[0].payValue).to.equal(50)
+                                expect(resnumber3.body[0].participants[0].participantStatus).to.equal('ACTIVE')
+
+                                expect(resnumber3.body[0].participants[1].email).to.equal('teste2@mail.com')
+                                expect(resnumber3.body[0].participants[1].status).to.equal(false)
+                                expect(resnumber3.body[0].participants[1].payValue).to.equal(501)
+                                expect(resnumber3.body[0].participants[1].participantStatus).to.equal('WAITING')
                                 done()
                             })
                     })
             })
     })
 
-    // after( (done) => {
-    //     serverAgent.get('/user/expenses')
-    // })
 })
 
-describe('creating invite using invalid guesting', function() {
+describe('creating invite', function() {
 
-    it('login', (done) => {
+    it('creating invite using invalid guesting', (done) => {
         var serverAgent = requestAgent.agent('http://localhost:8080/contare')
         var user = {
             name: 'Teste1',
@@ -138,7 +158,7 @@ describe('creating invite using invalid guesting', function() {
 
                 chai.request('http://localhost:8080/contare')
                     .post('/user/expenses')
-                    .send({ title: 'ExpenseTest', listEmail: [{ payValue: 150 }, { email: "teste3@mail.com", payValue: 510 }], totalValue: 660 })
+                    .send({ title: 'ExpenseTest', listEmail: [{ payValue: 150 }, { email: "testInexistent@mail.com", payValue: 510 }], totalValue: 660 })
                     .set('Content-Type', 'application/json')
                     .set('x-access-token', user_token)
                     .end((err, resnumber2) => {
