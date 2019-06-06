@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render correctly passing an user 1`] = `
+<div>
+  <h3>
+    Entrar
+  </h3>
+  <[object Object]
+    as="form"
+    inline={false}
+    noValidate={true}
+    onSubmit={[Function]}
+    validated={false}
+  >
+    <[object Object]
+      as="div"
+      controlId="formBasicEmail"
+    >
+      <[object Object]
+        column={false}
+        srOnly={false}
+      >
+        Email
+      </[object Object]>
+      <[object Object]
+        as="input"
+        placeholder="Digite seu email"
+        required={true}
+        type="email"
+      />
+      <[object Object]
+        as="div"
+        type="invalid"
+      >
+        Por favor digite o email.
+      </[object Object]>
+    </[object Object]>
+    <[object Object]
+      as="div"
+      controlId="formBasicPassword"
+    >
+      <[object Object]
+        column={false}
+        srOnly={false}
+      >
+        Senha
+      </[object Object]>
+      <[object Object]
+        as="input"
+        placeholder="Digite sua senha"
+        required={true}
+        type="password"
+      />
+      <[object Object]
+        as="div"
+        type="invalid"
+      >
+        Por favor digite sua senha.
+      </[object Object]>
+    </[object Object]>
+    <[object Object]
+      active={false}
+      disabled={false}
+      type="submit"
+      variant="primary"
+    >
+      Entrar
+    </[object Object]>
+  </[object Object]>
+  <ToastContainer
+    autoClose={5000}
+    bodyClassName={null}
+    className={null}
+    closeButton={
+      <CloseButton
+        ariaLabel="close"
+      />
+    }
+    closeOnClick={true}
+    draggable={true}
+    draggablePercent={80}
+    hideProgressBar={false}
+    newestOnTop={false}
+    pauseOnFocusLoss={true}
+    pauseOnHover={true}
+    position="top-right"
+    progressClassName={null}
+    progressStyle={null}
+    rtl={false}
+    style={null}
+    toastClassName={null}
+    transition={[Function]}
+  />
+</div>
+`;
+
+exports[`should render correctly 1`] = `
+<div>
+  <h3>
+    Entrar
+  </h3>
+  <[object Object]
+    as="form"
+    inline={false}
+    noValidate={true}
+    onSubmit={[Function]}
+    validated={false}
+  >
+    <[object Object]
+      as="div"
+      controlId="formBasicEmail"
+    >
+      <[object Object]
+        column={false}
+        srOnly={false}
+      >
+        Email
+      </[object Object]>
+      <[object Object]
+        as="input"
+        placeholder="Digite seu email"
+        required={true}
+        type="email"
+      />
+      <[object Object]
+        as="div"
+        type="invalid"
+      >
+        Por favor digite o email.
+      </[object Object]>
+    </[object Object]>
+    <[object Object]
+      as="div"
+      controlId="formBasicPassword"
+    >
+      <[object Object]
+        column={false}
+        srOnly={false}
+      >
+        Senha
+      </[object Object]>
+      <[object Object]
+        as="input"
+        placeholder="Digite sua senha"
+        required={true}
+        type="password"
+      />
+      <[object Object]
+        as="div"
+        type="invalid"
+      >
+        Por favor digite sua senha.
+      </[object Object]>
+    </[object Object]>
+    <[object Object]
+      active={false}
+      disabled={false}
+      type="submit"
+      variant="primary"
+    >
+      Entrar
+    </[object Object]>
+  </[object Object]>
+  <ToastContainer
+    autoClose={5000}
+    bodyClassName={null}
+    className={null}
+    closeButton={
+      <CloseButton
+        ariaLabel="close"
+      />
+    }
+    closeOnClick={true}
+    draggable={true}
+    draggablePercent={80}
+    hideProgressBar={false}
+    newestOnTop={false}
+    pauseOnFocusLoss={true}
+    pauseOnHover={true}
+    position="top-right"
+    progressClassName={null}
+    progressStyle={null}
+    rtl={false}
+    style={null}
+    toastClassName={null}
+    transition={[Function]}
+  />
+</div>
+`;
