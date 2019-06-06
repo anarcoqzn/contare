@@ -4,7 +4,6 @@
   "description": "## 1: Instalando o docker (UBUNTU)",
   "main": "route.js",
   "scripts": {
-    "authenticationTests": "mocha --timeout 5000 'tests/authenticationTests.js'",
     "test": "mocha --timeout 5000 'tests/'",
     "dev": "nodemon server.js"
   },
