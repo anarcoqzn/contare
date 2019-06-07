@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<userProfileComponent /> should render UserProfileComponent correctly 1`] = `<Route />`;
+
+exports[`should render UserProfileComponent correctly 1`] = `<Route />`;
